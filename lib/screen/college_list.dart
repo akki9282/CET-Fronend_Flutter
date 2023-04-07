@@ -161,44 +161,49 @@ class _CollegeListState extends State<CollegeList> {
                           color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     children: <Widget>[
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(height: 8.0),
-                          Text(
-                            "Branch Name: ${sub_list[index]["branch_name"].toString()}",
-                            style: TextStyle(
-                              fontSize: 14.5,
-                              fontWeight: FontWeight.w500,
-                            ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0),
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              SizedBox(height: 8.0),
+                              Text(
+                                "Branch Name: ${sub_list[index]["branch_name"].toString()}",
+                                style: TextStyle(
+                                  fontSize: 14.5,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(height: 4.0),
+                              Text(
+                                "College Type: ${sub_list[index]["type"].toString()}",
+                                style: TextStyle(fontSize: 14.0),
+                              ),
+                              SizedBox(height: 4.0),
+                              Text(
+                                "Cut-Off: ${sub_list[index]["percentage"].toString()}",
+                                style: TextStyle(fontSize: 14.0),
+                              ),
+                              SizedBox(height: 4.0),
+                              Text(
+                                "Category: ${sub_list[index]["category_name"].toString()}",
+                                style: TextStyle(fontSize: 14.0),
+                              ),
+                              SizedBox(height: 4.0),
+                              Text(
+                                "City: ${sub_list[index]["city"].toString()}",
+                                style: TextStyle(fontSize: 14.0),
+                              ),
+                              SizedBox(height: 4.0),
+                              Text(
+                                "Cap Round: ${sub_list[index]["cap_round"].toString()}",
+                                style: TextStyle(fontSize: 14.0),
+                              ),
+                              SizedBox(height: 8.0),
+                            ],
                           ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            "College Type: ${sub_list[index]["type"].toString()}",
-                            style: TextStyle(fontSize: 14.0),
-                          ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            "Cut-Off: ${sub_list[index]["percentage"].toString()}",
-                            style: TextStyle(fontSize: 14.0),
-                          ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            "Category: ${sub_list[index]["category_name"].toString()}",
-                            style: TextStyle(fontSize: 14.0),
-                          ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            "City: ${sub_list[index]["city"].toString()}",
-                            style: TextStyle(fontSize: 14.0),
-                          ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            "Cap Round: ${sub_list[index]["cap_round"].toString()}",
-                            style: TextStyle(fontSize: 14.0),
-                          ),
-                          SizedBox(height: 8.0),
-                        ],
+                        ),
                       ),
                     ],
                   ),
