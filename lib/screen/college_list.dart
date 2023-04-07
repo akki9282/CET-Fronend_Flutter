@@ -162,7 +162,7 @@ class _CollegeListState extends State<CollegeList> {
                     ),
                     children: <Widget>[
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
                           SizedBox(height: 8.0),
                           Text(
@@ -280,10 +280,9 @@ class _CollegeListState extends State<CollegeList> {
                         ? Center(
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
-                              child: const Text("Search Result Not Found",
+                              child: const Text("Search Result Not Found.",
                                   style: TextStyle(
-                                    fontSize: 20,
-                                  )),
+                                      fontSize: 20, color: Colors.red)),
                             ),
                           )
                         : Container(
