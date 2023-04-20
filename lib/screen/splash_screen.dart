@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        Duration(seconds: 2),
         () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (BuildContext) => HomeScreen())));
   }
@@ -25,10 +25,33 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Material(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: Center(
-          child: Image.asset('assets/image/college-predictor.png'),
-        ),
+            child: Container(
+          width: 400,
+          height: 500,
+          child: Column(
+            children: [
+              Center(
+                child: Image.asset('assets/image/applogo2.png'),
+              ),
+              Text(
+                "College Predict",
+                style: TextStyle(fontSize: 27, color: Colors.black),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Predict Your College \nBased on Percentege & Category.",
+                style: TextStyle(
+                    fontSize: 15, color: Color.fromARGB(255, 73, 73, 73)),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        )),
       ),
     );
   }
